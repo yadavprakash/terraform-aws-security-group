@@ -24,7 +24,7 @@ module "security_group_rules" {
   source         = "./../../."
   name           = local.name
   environment    = local.environment
-  vpc_id         = module.vpc.vpc_id
+  vpc_id         = module.vpc.id
   new_sg         = false
   existing_sg_id = "sg-0474592052307dbb2"
 

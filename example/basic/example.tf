@@ -24,7 +24,7 @@ module "security_group" {
   source      = "./../.././"
   name        = local.name
   environment = local.environment
-  vpc_id      = module.vpc.vpc_id
+  vpc_id      = module.vpc.id
 
   ## INGRESS Rules
   new_sg_ingress_rules_with_cidr_blocks = [{

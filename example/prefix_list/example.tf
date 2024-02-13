@@ -24,7 +24,7 @@ module "security_group" {
   source              = "./../.././"
   name                = local.name
   environment         = local.environment
-  vpc_id              = module.vpc.vpc_id
+  vpc_id              = module.vpc.id
   prefix_list_enabled = true
   entry = [{
     cidr = "10.19.0.0/16"

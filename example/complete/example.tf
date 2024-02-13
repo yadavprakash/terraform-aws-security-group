@@ -11,7 +11,7 @@ locals {
 ## VPC Module Call.
 ##-----------------------------------------------------------------------------
 module "vpc" {
-  source      = "git::https://github.com/opsstation/terraform-aws-vpc.git?ref=v1.0.0"
+  source      = "git::git@github.com:opsstation/terraform-aws-vpc.git?ref=v1.0.0"
   name        = "appdd"
   environment = "test"
   cidr_block  = "10.0.0.0/16"
@@ -24,7 +24,7 @@ module "security_group" {
   source      = "./../../"
   name        = local.name
   environment = local.environment
-  vpc_id      = module.vpc.vpc_id
+  vpc_id      = module.vpc.id
 
   ## INGRESS Rules
   new_sg_ingress_rules_with_cidr_blocks = [{
