@@ -264,24 +264,6 @@ module "security_group" {
 }
 ```
 
-## Module Inputs
-- `name`: A name for your application.
-- `environment`: The environment for your application.
-- `cidr_block`: The IP range for your VPC.
-- `vpc_id`: The ID of the VPC created by the VPC module.
-  For security group settings, you can configure the ingress and egress rules using variables like:
-- `new_sg_ingress_rules_with_cidr_blocks`.
-- `new_sg_ingress_rules_with_self`.
-- `new_sg_ingress_rules_with_source_sg_id`.
-- `new_sg_egress_rules_with_cidr_blocks`.
-- `new_sg_egress_rules_with_self`.
-- `new_sg_egress_rules_with_source_sg_id`.
-  You can define the rules for SSH and MongoDB traffic as shown in the example.
-## Module Outputs
-- `vpc_id` (string): The ID of the VPC created.
-- `security_group_id`: The ID of the created security group.
-- Other relevant security group outputs (modify as needed).
-
 ## Examples
 For detailed examples on how to use this module, please refer to the [Examples](https://github.com/opsstation/terraform-aws-security-group/tree/master/example) directory within this repository.
 
