@@ -11,7 +11,7 @@ locals {
 ## VPC Module Call.
 ##-----------------------------------------------------------------------------
 module "vpc" {
-  source      = "git::git@github.com:opsstation/terraform-aws-vpc.git?ref=v1.0.0"
+  source      = "git::git@github.com:yadavprakash/terraform-aws-vpc.git?ref=v1.0.0"
   name        = "appdd"
   environment = "test"
   cidr_block  = "10.0.0.0/16"
@@ -129,3 +129,4 @@ module "security_group" {
       description              = "Allow Mongodb traffic."
   }]
 }
+
