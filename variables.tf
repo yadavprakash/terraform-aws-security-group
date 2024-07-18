@@ -18,13 +18,13 @@ variable "label_order" {
 
 variable "repository" {
   type        = string
-  default     = "https://github.com/opsstation/terraform-aws-security_group"
+  default     = "https://github.com/yadavprakash/terraform-aws-security_group"
   description = "Terraform current module repo"
 }
 
 variable "managedby" {
   type        = string
-  default     = "opsstation"
+  default     = "yadavprakash"
   description = "ManagedBy, eg 'cypik'."
 }
 
@@ -184,3 +184,4 @@ variable "prefix_list_address_family" {
   default     = "IPv4"
   description = "(Required, Forces new resource) The address family (IPv4 or IPv6) of prefix list."
 }
+
